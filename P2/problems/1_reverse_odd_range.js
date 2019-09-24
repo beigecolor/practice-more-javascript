@@ -11,7 +11,14 @@ reverseOddRange(9, 5) => []
 *******************************************************************************/
 
 function reverseOddRange(start, end) {
-  // your code here...
+  let rev = [];
+
+  for (var i = end; i >= start; i -= 1) {
+    if (i % 2 === 1) {
+      rev.push(i);
+    }
+  }
+  return rev;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
