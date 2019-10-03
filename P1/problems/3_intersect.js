@@ -11,14 +11,15 @@ intersect(['a', 'b', 'c'], ['x', 'y', 'z']) => []
 *******************************************************************************/
 
 function intersect(arr1, arr2) {
-  let midpoint = [];
-  for (var i = 0; i < arr1.length; i += 1) {
-    for (var j = 0; j < arr2.length; j += 1) {
-      if (arr1[i] === arr2[i]) {
-        midpoint.push();
-      }
+  let commonStr = [];
+
+  for (let i = 0; i < arr1.length; i += 1) {
+    var char = arr1[i];
+    if (arr2.indexOf(char) > -1) {
+      commonStr.push(char);
     }
   }
+  return commonStr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
