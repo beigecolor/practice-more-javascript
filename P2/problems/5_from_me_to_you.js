@@ -10,6 +10,8 @@ fromMeToYou('love me or hate me') => 'love you or hate you'
 
 function fromMeToYou(sentence) {
   // your code here...
+  let sent = sentence.replace(/me/gi, "you");
+  return sent;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
