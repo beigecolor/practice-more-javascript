@@ -10,7 +10,17 @@ mysticNumbers(14) => [ 8, 6, 4 ]
 *******************************************************************************/
 
 function mysticNumbers(max) {
-  // your code here...
+  let nums = [];
+
+  for (let i = max - 1; i >= 4; i -= 1) {
+    if (i % 4 === 0 && i % 6 === 0) {
+      continue;
+    }
+    if (i % 4 === 0 || i % 6 === 0) {
+      nums.push(i);
+    }
+  }
+  return nums;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
