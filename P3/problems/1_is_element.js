@@ -12,8 +12,13 @@ isElement(["a", "b", "c"], "a") => true
 isElement(["a", "b", "c"], "d") => false
 *******************************************************************************/
 
-function isElement(array, ele){
-  // your code here...
+function isElement(array, ele) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === ele) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
