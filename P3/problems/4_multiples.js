@@ -8,8 +8,13 @@ multiples(10, 2) => [ 2, 4, 6, 8 ]
 multiples(15, 3) => [ 3, 6, 9, 12 ]
 *******************************************************************************/
 
-function multiples(max, num){
-  // your code here...
+function multiples(max, num) {
+  let nums = [];
+
+  for (let i = num; i < max; i += num) {
+    nums.push(i);
+  }
+  return nums;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
