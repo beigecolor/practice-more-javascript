@@ -12,7 +12,9 @@ function multiples(max, num) {
   let nums = [];
 
   for (let i = num; i < max; i += num) {
-    nums.push(i);
+    if (i % num === 0) {
+      nums.push(i);
+    }
   }
   return nums;
 }
