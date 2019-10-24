@@ -9,7 +9,13 @@ mirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a
 ***********************************************************************/
 
 function mirrorArray(array) {
+  let newArr = array.slice(0, array.length);
 
+  for (let i = array.length - 1; i >= 0; i -= 1) {
+    let rev = array[i];
+    newArr.push(rev);
+  }
+  return newArr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
