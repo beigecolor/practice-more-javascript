@@ -13,10 +13,11 @@ abbreviate('programming is fantastic'); // => 'prgrmmng is fntstc'
 abbreviate('hello world'); // => 'hll wrld'
 abbreviate('how are you'); // => 'how are you'
 ***********************************************************************/
-
-function abbreviate(sentence) {
-
+function removeVowels(words) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let newWord = "";
 }
+function abbreviate(sentence) {}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = abbreviate;
