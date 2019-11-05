@@ -10,19 +10,18 @@ firstLastCap('what is on the radio'); // =>'WhaT IS ON ThE RadiO'
 ***********************************************************************/
 
 function firstLastCap(sentence) {
-  var words = sentence.split(' ');
+  var words = sentence.split(" ");
   var newWords = [];
 
   for (var i = 0; i < words.length; i++) {
     var word = words[i];
     var firstChar = word[0].toUpperCase();
     var lastChar = word[word.length - 1].toUpperCase();
-    var middleChars = word.slice(1, -1).toLowerCase()
-    var newWord = firstChar + middleChars + lastChar;
-    newWords.push(newWord);
+    var middleChars = word.slice(1, -1).toLowerCase();
+    var newSent = firstChar + middleChars + lastChar;
+    newWords.push(newSent);
   }
-
-  return newWords.join(' ');
+  return newWords.join(" ");
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
