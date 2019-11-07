@@ -17,9 +17,10 @@ printObject(bootcamp); // prints
 `population - 120`
 ***********************************************************************/
 
-
 function printObject(obj) {
-
+  for (var key in obj) {
+    console.log(key + "-" + obj[key]);
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
