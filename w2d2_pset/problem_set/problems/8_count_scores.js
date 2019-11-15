@@ -29,9 +29,21 @@ var peeps = [
 countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
-
 function countScores(people) {
+  var scoresObj = {};
 
+  for (var i = 0; i < people.length; i += 1) {
+    var personObj = people[i];
+    var name = personObj.name;
+    var score = personObj.score;
+
+    if (scoresObj[name]) {
+      scoresObj[name] += score;
+    } else {
+      scoresObj[name] = score;
+    }
+  }
+  return scoresObj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
