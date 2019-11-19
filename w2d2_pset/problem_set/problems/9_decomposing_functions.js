@@ -5,7 +5,6 @@ before moving on to the next problem. Each function will require the
 previous to solve.
 ***********************************************************************/
 
-
 /***********************************************************************
 Write a function `isPrime(number)` that returns a boolean indicating if
 `number` is prime or not. Assume `number` is a positive integer.
@@ -19,7 +18,16 @@ isPrime(303212); // => false
 ***********************************************************************/
 
 function isPrime(number) {
+  if (number < 2) {
+    return false;
+  }
 
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /***********************************************************************
@@ -34,7 +42,17 @@ firstNPrimes(4); // => [2, 3, 5, 7]
 ***********************************************************************/
 
 function firstNPrimes(n) {
+  let primes = [];
+  let num = 2;
 
+  while (primes.length < n) {
+    if (isPrime(num)) {
+      primes.push(num);
+    }
+
+    num += 1;
+  }
+  return primes;
 }
 
 /***********************************************************************
@@ -49,7 +67,14 @@ sumOfNPrimes(4); // => 17
 ***********************************************************************/
 
 function sumOfNPrimes(n) {
+  let sum = 0;
+  let primes = firstNPrimes(n);
 
+  for (let i = 0; i < primes.length; i += 1) {
+    sum += primes[i];
+  }
+
+  return sum;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
