@@ -15,7 +15,23 @@ peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
 ***********************************************************************/
 
 function peakFinder(array) {
+  let peaks = [];
 
+  for (let i = 0; i < array.length; i += 1) {
+    let point = array[i];
+    let before = array[i - 1];
+    let after = array[i + 1];
+
+    if (i === 0 && point > after) {
+      peaks.push(i);
+    } else if (i === array.length - 1 && point > before) {
+      peaks.push(i);
+    } else if (point > before && point > after) {
+      peaks.push(i);
+    }
+  }
+
+  return peaks;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
