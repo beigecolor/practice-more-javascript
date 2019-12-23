@@ -13,7 +13,18 @@ arr2 //=> [[1, 3]]
 ***********************************************************************/
 
 function divisibleByThreePairSum(array) {
+  let pairs = [];
 
+  for (let i = 0; i < array.length; i += 1) {
+    for (let j = i + 1; j < array.length; j += 1) {
+      let sum = array[i] + array[j];
+
+      if (sum % 3 === 0) {
+        pairs.push([i, j]);
+      }
+    }
+  }
+  return pairs;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
