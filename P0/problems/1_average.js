@@ -7,11 +7,10 @@
  ** average(5, 7); // => 6
  ** average(24, 32); // => 28
  */
-
 function average(num1, num2) {
-  let avg = (num1 + num2) / 2;
+  let total = num1 + num2;
+  let avg = total / 2;
   return avg;
 }
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = average;
