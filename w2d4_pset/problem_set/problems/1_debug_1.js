@@ -6,13 +6,12 @@
 // jump(12) //=> "I'm jumping 12 feet high!";
 
 function howHigh(height) {
-  return (height + " feet high!");
+  return height + " feet high!";
 }
 
 function jump(height) {
-  return "I'm jumping " + howhigh(height);
+  return "I'm jumping " + howHigh(height);
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = jump;
