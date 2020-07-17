@@ -28,7 +28,7 @@ function isHappyGroup(group) {
   for (var i = 0; i < group.length; i += 1) {
     var person = group[i];
 
-    if (idHappy[person]) {
+    if (isHappy(person)) {
       amount += 1;
     }
   }
@@ -39,7 +39,6 @@ function isHappyGroup(group) {
 
   return false;
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = isHappyGroup;
