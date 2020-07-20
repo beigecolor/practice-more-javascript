@@ -6,8 +6,8 @@
 // isMagicNumer(50) //=> false;
 
 var magicify = function(number) {
-  console.log(number - 34);
-}
+  return number - 34;
+};
 
 var isMagicNumer = function(number) {
   var magicNumb = magicify(number);
@@ -17,7 +17,7 @@ var isMagicNumer = function(number) {
   }
 
   return false;
-}
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = isMagicNumer;
