@@ -37,7 +37,9 @@ titleize("shall we dance?", ["dance"])
 ***********************************************************************/
 
 function titleize(title, stopWords) {
+  let newTitle = "";
 
+  return newTitle;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
