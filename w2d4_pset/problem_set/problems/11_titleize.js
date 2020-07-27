@@ -35,11 +35,37 @@ titleize("i LOVE; lover of mine", ["love", "of"])
 titleize("shall we dance?", ["dance"])
 => "Shall We dance?"
 ***********************************************************************/
+function removePunc(word) {
+  let punct = [";", "!", ".", "?", ",", "-"];
+  let lastChar = word[word.length - 1];
 
+  if (punct.indexOf(lastChar) !== -1) {
+    return word.slice(0, -1);
+  } else {
+    return word;
+  }
+}
+
+function isStop(word, stopWords) {
+  let noPunc = removePunc(word);
+
+  return stopWords.indexOf(noPunc) !== -1;
+}
 function titleize(title, stopWords) {
-  let newTitle = "";
+  let newTitle = [];
+  let words = title.split(" ");
 
-  return newTitle;
+  for (let i = 0; i < words.length; i += 1) {
+    let word = words[i].tolowerCase();
+
+    if (isStop(word, stopWords)) {
+      newTitle.push(word);
+    } else {
+      word = word[0].toUpperCase() + word.slice(1);
+      newTitle.push(word);
+    }
+  }
+  return newTitle.join(" ");
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
