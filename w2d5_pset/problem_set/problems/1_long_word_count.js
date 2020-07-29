@@ -13,7 +13,9 @@ longWordCount("seventy schfifty five"); // => 1
 ***********************************************************************/
 
 function longWordCount(sentence) {
+  let word = 0;
 
+  return word;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
