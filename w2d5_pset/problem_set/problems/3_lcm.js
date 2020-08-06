@@ -10,9 +10,10 @@ lcm(24, 26); // => 312
 ***********************************************************************/
 
 function lcm(num1, num2) {
+  let leastCommonMultiple = 0;
 
+  return leastCommonMultiple;
 }
-
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = lcm;
