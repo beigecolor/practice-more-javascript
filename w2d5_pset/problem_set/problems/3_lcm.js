@@ -10,9 +10,14 @@ lcm(24, 26); // => 312
 ***********************************************************************/
 
 function lcm(num1, num2) {
-  let leastCommonMultiple = 0;
+  let i = num1;
 
-  return leastCommonMultiple;
+  while (true) {
+    if (i % num2 === 0) {
+      return i;
+    }
+    i += num1;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
