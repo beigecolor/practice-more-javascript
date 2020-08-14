@@ -20,8 +20,16 @@ var obj2 = {
 objectSize(obj2); // => 3
 ***********************************************************************/
 
+// function objectSize(obj) {
+//   return Object.keys(obj).length;
+// }
 function objectSize(obj) {
-  return Object.keys(obj).length;
+  let count = 0;
+
+  for (let k in obj) {
+    count += 1;
+  }
+  return count;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
