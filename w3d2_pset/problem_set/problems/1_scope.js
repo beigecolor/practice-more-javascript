@@ -10,6 +10,9 @@ function bar() {
   return foo;
 }
 
-console.log(foo);   // What is foo on this line?
-console.log(bar()); // What is bar() on this line?
-console.log(foo);   // What is foo on this line?
+console.log(foo);
+5; // What is foo on this line?
+console.log(bar());
+Anthony; // What is bar() on this line?
+console.log(foo);
+5; // What is foo on this line?
