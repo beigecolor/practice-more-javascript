@@ -23,7 +23,19 @@ pairsToString(array2); // => 'food!'
 ***********************************************************************/
 
 function pairsToString(arr) {
+  let pairs = "";
 
+  for (let i = 0; i < arr.length; i += 1) {
+    let pair = arr[i];
+    let char = pair[0];
+    let num = pair[1];
+
+    for (let j = 0; j < num; j += 1) {
+      pairs += char;
+    }
+  }
+
+  return pairs;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
