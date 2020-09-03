@@ -33,7 +33,10 @@ will print 5.
 ***********************************************************************/
 
 function myForEach(array, cb) {
-
+  for (let idx = 0; idx < array.length; idx += 1) {
+    let el = array[idx];
+    cb(el, idx, array);
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
