@@ -26,7 +26,7 @@ parameters to the callback. This allows us to create a versatile
 ***********************************************************************/
 
 function mySelect(arr, cb) {
-
+  let selected = [];
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
