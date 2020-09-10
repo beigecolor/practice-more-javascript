@@ -18,7 +18,12 @@ myMap([9, 25, 100, 36, 81], Math.sqrt); // => [ 3, 5, 10, 6, 9 ]
 ***********************************************************************/
 
 function myMap(arr, cb) {
+  let result = [];
 
+  for (let i = 0; i < arr.length; i += 1) {
+    result.push(cb(arr[i], i, arr));
+  }
+  return result;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
