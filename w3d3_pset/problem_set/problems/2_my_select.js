@@ -27,6 +27,19 @@ parameters to the callback. This allows us to create a versatile
 
 function mySelect(arr, cb) {
   let selected = [];
+
+  for (let i = 0; i < arr.length; i += 1) {
+    let el = arr[i];
+
+    if (cb(el, i, arr)) {
+      selected.push(el);
+    }
+  }
+  return selected;
+}
+
+function isEven(num) {
+  return num % 2 === 0;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
