@@ -16,7 +16,14 @@ myEvery([2, 2, 10, 11, 12], isEven); // => false
 ***********************************************************************/
 
 function myEvery(arr, cb) {
+  for (let i = 0; i < arr.length; i += 1) {
+    let ele = arr[i];
+    if (cb(ele) === false) {
+      return false;
+    }
+  }
 
+  return true;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
