@@ -16,7 +16,13 @@ mySome([2, 4, 6, 8], isNegative); // => false
 ***********************************************************************/
 
 function mySome(arr, cb) {
-
+  for (let i = 0; i < arr.length; i += 1) {
+    let ele = arr[i];
+    if (cb(ele) === true) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
