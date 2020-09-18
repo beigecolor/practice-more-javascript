@@ -17,7 +17,15 @@ powerSequence(8, 3); // => [ 8, 64, 512 ]
 ***********************************************************************/
 
 function powerSequence(base, length) {
+  let seq = [base];
 
+  while (seq.length < length) {
+    let last = seq[seq.length - 1];
+    let next = base * last;
+
+    seq.push(next);
+  }
+  return seq;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
