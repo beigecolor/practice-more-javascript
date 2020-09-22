@@ -11,7 +11,16 @@ collapseString('hello   app academy'); //=> 'helo ap academy'
 ***********************************************************************/
 
 function collapseString(str) {
+  let collapsed = "";
 
+  for (let i = 0; i < str.length; i += 1) {
+    let char = str[i];
+
+    if (char !== collapsed[collapsed.length - 1]) {
+      collapsed += char;
+    }
+  }
+  return collapsed;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
