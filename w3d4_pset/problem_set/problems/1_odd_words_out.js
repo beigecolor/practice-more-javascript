@@ -10,7 +10,17 @@ oddWordsOut('what is the answer'); // => 'what is answer'
 ***********************************************************************/
 
 function oddWordsOut(sentence) {
+  let words = sentence.split(" ");
+  let newWords = [];
 
+  for (var i = 0; i < words.length; i += 1) {
+    let word = words[i];
+
+    if (word.length % 2 === 0) {
+      newWords.push(word);
+    }
+  }
+  return newWords.join(" ");
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
