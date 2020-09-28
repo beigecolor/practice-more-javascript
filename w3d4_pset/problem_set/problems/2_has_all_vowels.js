@@ -12,7 +12,14 @@ hasAllVowels('hello world'); // => false
 ***********************************************************************/
 
 function hasAllVowels(str) {
+  let vowels = ["a", "e", "i", "o", "u"];
 
+  for (var i = 0; i < vowels.length; i += 1) {
+    if (str.indexOf(vowels[i]) === -1) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
