@@ -11,9 +11,28 @@ favoriteWord('a', 'sinful caesar sipped his snifter') //=> 'caesar'
 favoriteWord('s', 'sinful caesar sipped his snifter') //=> 'sinful'
 favoriteWord('x', 'sinful caesar sipped his snifter') //=> ''
 ***********************************************************************/
+function letterCount(word, char) {
+  let count = 0;
+
+  for (var i = 0; i < word.length; i += 1) {
+    if (word[i] === char) {
+      count += 1;
+    }
+  }
+  return count;
+}
 
 function favoriteWord(favoriteLetter, sentence) {
+  let words = sentence.split(" ");
+  let fav = "";
 
+  for (var i = 0; i < words.length; i += 1) {
+    let word = words[i];
+    if (letterCount(fav, favoriteLetter) < letterCount(word, favoriteLetter)) {
+      fav = word;
+    }
+  }
+  return fav;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
