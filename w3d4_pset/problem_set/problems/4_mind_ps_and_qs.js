@@ -18,9 +18,23 @@ mindPsAndQs('PQPQ'); // => 4
 mindPsAndQs('PPPXQPPPQ'); // => 5
 ***********************************************************************/
 
-
 function mindPsAndQs(str) {
+  let long = 0;
+  let curr = 0;
 
+  for (var i = 0; i < str.length; i += 1) {
+    let char = str[i];
+    if (char === "P" || char === "Q") {
+      curr += 1;
+
+      if (curr > long) {
+        long = curr;
+      }
+    } else {
+      curr = 0;
+    }
+  }
+  return long;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
